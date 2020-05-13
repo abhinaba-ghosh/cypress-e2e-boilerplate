@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "allowUnusedLabels": false,
+    "baseUrl": ".",
+    "paths": {
+      "cypress/*": ["./cypress/*"]
+    },
+    "lib": ["dom", "es6", "es7"],
+    "declaration": false,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noEmitHelpers": true,
+    "importHelpers": true,
+    "outDir": "transform",
+    "removeComments": false,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "mapRoot": "transform",
+    "esModuleInterop": true,
+    "target": "es5",
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["node", "cucumber", "cypress", "@shelex/cypress-allure-plugin/reporter"]
+  },
+  "exclude": ["node_modules", "typescript"]
+}

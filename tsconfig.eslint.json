@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src/**/*.ts", "test/**/*.ts"],
+  "no-inferrable-types": false,
+
+  "exclude": ["node_modules", "./config", "./lib"]
+}
