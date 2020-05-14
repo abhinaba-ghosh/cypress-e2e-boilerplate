@@ -4,6 +4,7 @@
 const cucumber = require('cypress-cucumber-preprocessor').default;
 const browserify = require('@cypress/browserify-preprocessor');
 const AllureWriter = require('@shelex/cypress-allure-plugin/writer');
+
 module.exports = (on, config) => {
   const options = browserify.defaultOptions;
 

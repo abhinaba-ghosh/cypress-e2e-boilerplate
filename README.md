@@ -1,6 +1,6 @@
 # Run commands
 
 - npm ci
-- npm run cy:cucumber:run
+- npm run cy:e2e
 
 ## Readme will be updated later

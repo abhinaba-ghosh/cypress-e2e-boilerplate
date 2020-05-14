@@ -17,5 +17,6 @@
   "no-unused-variables": "on",
   "no-background-only-scenario": "on",
   "no-empty-background": "on",
+  "new-line-at-eof": ["on", "no"] ,
   "scenario-size": ["on", { "steps-length": {"Background": 50, "Scenario": 50}}]
 }

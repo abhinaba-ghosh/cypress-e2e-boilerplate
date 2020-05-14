@@ -1,9 +1,1 @@
 node_modules
-cypress/.env
-cypress/screenshots
-cypress/videos
-cypress/reports
-.git
-.cache
-**/.DS_Store
-.scannerwork/

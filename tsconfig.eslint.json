@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["src/**/*.ts", "test/**/*.ts"],
+  "include": ["cypress/**/*.ts"],
   "no-inferrable-types": false,
 
-  "exclude": ["node_modules", "./config", "./lib"]
+  "exclude": ["node_modules"]
 }
