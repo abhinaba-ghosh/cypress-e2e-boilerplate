@@ -1,0 +1,14 @@
+{
+  "baseUrl": "https://jsonplaceholder.typicode.com",
+  "testFiles": "**/*.spec.ts",
+  "video": false,
+  "defaultCommandTimeout": 4000,
+  "execTimeout": 60000,
+  "taskTimeout": 60000,
+  "pageLoadTimeout": 60000,
+  "requestTimeout": 5000,
+  "responseTimeout": 30000,
+  "env": {
+    "allureResultsPath": "reports/api/allure-results"
+  }
+}

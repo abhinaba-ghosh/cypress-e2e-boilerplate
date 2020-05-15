@@ -1,25 +1,27 @@
 {
-  "name": "cypress-automation-docker",
-  "version": "0.0.0",
-  "description": "This package is to install cypress and reporters",
+  "name": "cy-fy",
+  "version": "0.1.1",
+  "description": "Cypress starter pack for UI and API testing",
   "main": "index.js",
   "scripts": {
     "lint:fix": "eslint . --ext .ts --fix",
     "lint:gherkin": "gherkin-lint -c ./.gherkin-lintrc cypress/**/*.feature",
     "lint": "npm run lint:fix && npm run lint:gherkin",
-    "cy:e2e": "npm run clear && npm run cy:run:headless && npm run report",
-    "cy:cucumber:dev": "cypress open --browser chrome",
-    "cy:run:chrome": "cypress run --env allure=true --browser chrome",
-    "cy:run:firefox": "cypress run --env allure=true --browser firefox",
-    "cy:run:edge": "cypress run --env allure=true  --browser edge",
-    "cy:run:headless": "cypress run --env allure=true --headless --browser chrome",
-    "report": "npx allure generate reports/allure-results --clean -o reports/allure-report && allure open reports/allure-report",
-    "clear": "rm -r reports/allure-results/ reports/allure-report reports/screenshots reports/videos || true"
+    "cy:e2e": "npm run clear && npm run cy:ui:headless && npm run report:ui",
+    "cy:api": "npm run clear && npm run cy:api:run && npm run report:api",
+    "cy:ui:dev": "cypress open --config-file config/e2e.config.json --browser chrome",
+    "cy:ui:run": "cypress run --config-file config/e2e.config.json --env allure=true",
+    "cy:api:run": "cypress run --config-file config/api.config.json --env allure=true",
+    "cy:ui:headless": "cypress run --config-file config/e2e.config.json --env allure=true --headless --browser chrome",
+    "report:ui": "npx allure generate reports/e2e/allure-results --clean -o reports/e2e/allure-report && allure open reports/e2e/allure-report",
+    "report:api": "npx allure generate reports/api/allure-results --clean -o reports/api/allure-report && allure open reports/api/allure-report",
+    "clear": "rm -r reports/** || true"
   },
   "dependencies": {
     "cucumber": "6.0.5",
     "cypress": "4.5.0",
     "cypress-cucumber-preprocessor": "2.0.1",
+    "http-status-codes": "^1.4.0",
     "tsify": "4.0.1"
   },
   "devDependencies": {
@@ -40,7 +42,6 @@
     "gherkin-lint": "3.3.6",
     "husky": "3.0.0",
     "lint-staged": "9.2.0",
-    "multiple-cucumber-html-reporter": "^1.16.2",
     "prettier": "1.18.2",
     "pretty-quick": "1.11.1",
     "sinon": "7.5.0",

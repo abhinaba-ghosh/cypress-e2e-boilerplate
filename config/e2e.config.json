@@ -8,9 +8,9 @@
   "pageLoadTimeout": 60000,
   "requestTimeout": 5000,
   "responseTimeout": 30000,
-  "screenshotsFolder": "reports/screenshots",
-  "videosFolder": "reports/videos",
+  "screenshotsFolder": "reports/e2e/screenshots",
+  "videosFolder": "reports/e2e/videos",
   "env": {
-    "allureResultsPath": "reports/allure-results"
+    "allureResultsPath": "reports/e2e/allure-results"
   }
 }
