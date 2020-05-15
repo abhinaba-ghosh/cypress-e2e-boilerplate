@@ -1,4 +1,4 @@
-# Cy-fy
+# cy-fy
 
 Cypress starter pack for UI and API automation testing. Simple and neat folder structure in combination with cucumber and typescript will help you write test faster.
 
