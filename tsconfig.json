@@ -3,6 +3,7 @@
     "lib": ["dom", "es6", "es7"],
     "module": "commonjs",
     "skipLibCheck": true,
+    "sourceType": "module",
     "types": ["node", "cypress", "@shelex/cypress-allure-plugin/reporter", "cypress-react-selector"]
   },
   "exclude": ["node_modules"]

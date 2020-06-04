@@ -1,7 +1,7 @@
 {
-  "name": "cypress-typescript-allure",
+  "name": "cy-fy",
   "version": "0.1.1",
-  "description": "Cypress starter pack for UI and API testing",
+  "description": "Cypress Typescript starter pack for UI and API testing",
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --ext .ts --fix",
@@ -11,12 +11,10 @@
     "cy:ui:run": "cypress run --config-file config/ui.config.json --env allure=true",
     "cy:api:run": "cypress run --config-file config/api.config.json --env allure=true",
     "cy:ui:headless": "cypress run --config-file config/ui.config.json --env allure=true --headless --browser chrome",
-    "cy:run:parallel": "node cypress/scripts/parallel executors=2 script=cy:ui:run",
+    "cy:run:parallel": "node parallel executors=2 script=cy:ui:run",
     "report:ui": "npx allure generate reports/ui/allure-results --clean -o reports/ui/allure-report && allure open reports/ui/allure-report",
     "report:api": "npx allure generate reports/api/allure-results --clean -o reports/api/allure-report && allure open reports/api/allure-report",
-    "clear": "rm -r reports/** || true",
-    "docker:build:cypress": "docker build -t cypress -f docker/Dockerfile .",
-    "docker:stop:cypress": "docker stop $(docker ps -qa --filter ancestor=cypress)"
+    "clear": "rm -r reports/** || true"
   },
   "dependencies": {
     "cypress": "4.7.0",
