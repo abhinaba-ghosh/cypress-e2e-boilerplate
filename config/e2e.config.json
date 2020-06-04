@@ -1,0 +1,16 @@
+{
+  "baseUrl": "https://the-internet.herokuapp.com",
+  "testFiles": "**/*.{feature,features}",
+  "video": true,
+  "defaultCommandTimeout": 4000,
+  "execTimeout": 60000,
+  "taskTimeout": 60000,
+  "pageLoadTimeout": 60000,
+  "requestTimeout": 5000,
+  "responseTimeout": 30000,
+  "screenshotsFolder": "reports/e2e/screenshots",
+  "videosFolder": "reports/e2e/videos",
+  "env": {
+    "allureResultsPath": "reports/e2e/allure-results"
+  }
+}
