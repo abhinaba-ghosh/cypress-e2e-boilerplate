@@ -24,6 +24,7 @@ pipeline {
     // first stage installs node dependencies and Cypress binary
     stage('Configuration') {
       steps {
+        sh 'npm config set registry https://registry.npmjs.org/'
         sh 'npm cache clean --force'
         sh 'npm ci'
         sh 'npm run clear' 
@@ -33,8 +34,8 @@ pipeline {
 
    stage('Run Cypress UI Tests') {
    steps {
-    sh "npm run e2e:headless" 
-    sh "npm run report" 
+    sh "npm run cy:ui:headless" 
+    sh "npm run report:ui" 
    }
   }
 
