@@ -4,12 +4,12 @@ node {
 
 pipeline {
   agent { 
-                 dockerfile {
-                        filename "${CYPRESS_DOCKER_PATH}"
-                        args  '--net=host -e DISPLAY=":0"'
-                         args '--entrypoint=\'\''
-                        reuseNode true
-                } 
+        dockerfile {
+              filename "${CYPRESS_DOCKER_PATH}"
+              args  '--net=host -e DISPLAY=":0"'
+                args '--entrypoint=\'\''
+              reuseNode true
+      } 
   }
  environment {
   HOME = '.'
@@ -21,7 +21,7 @@ pipeline {
       [name: '*/master']
      ],
      userRemoteConfigs: [
-      [url: 'https://github.com/abhinaba-ghosh/testcafe-typescript-starter.git']
+      [url: 'https://github.com/abhinaba-ghosh/cy-fy.git']
      ]
     ])
    }
