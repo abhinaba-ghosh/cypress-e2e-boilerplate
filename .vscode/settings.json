@@ -1,0 +1,53 @@
+{
+  "cucumberautocomplete.steps": ["cypress/**/*.ts"],
+  "cucumberautocomplete.syncfeatures": "cypress/**/*.feature",
+  "cucumberautocomplete.smartSnippets": true,
+  "cucumberautocomplete.stepsInvariants": true,
+  "cucumberautocomplete.skipDocStringsFormat": true,
+  "cucumberautocomplete.onTypeFormat": true,
+
+  "cucumberautocomplete.customParameters": [
+    {
+      "parameter": "\"(.*)\"",
+      "value": "\".*\""
+    }
+  ],
+  "editor.quickSuggestions": {
+    "comments": false,
+    "strings": true,
+    "other": true
+  },
+  "cucumberautocomplete.gherkinDefinitionPart": "(Given|When|Then|And)\\(",
+  "editor.tabSize": 2,
+  "files.autoSave": "afterDelay",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "window.zoomLevel": 0,
+  "json.format.enable": false,
+  "terminal.integrated.rendererType": "dom",
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.accessibilitySupport": "off",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.referencesCodeLens.enabled": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "cSpell.enableFiletypes": ["dotenv", "feature", "javascript", "json", "text", "typescript"],
+  "cSpell.userWords": ["GPES", "JIRA", "USERSTORY", "labelledby", "uploader"],
+  "cSpell.words": ["Chainable", "backoffice"],
+  "cucumber-quick": {
+    "tool": "protractor",
+    "script": "npx protractor launch"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true,
+  "eslint.enable": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "path-intellisense.absolutePathToWorkspace": false
+}

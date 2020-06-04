@@ -1,0 +1,76 @@
+{
+  "name": "cypress-typescript",
+  "version": "0.1.1",
+  "description": "Cypress starter pack for UI and API testing",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .ts --fix",
+    "cy:e2e": "npm run clear && npm run cy:ui:headless && npm run report:ui",
+    "cy:api": "npm run clear && npm run cy:api:run && npm run report:api",
+    "cy:ui:dev": "cypress open --config-file config/ui.config.json --browser chrome",
+    "cy:ui:run": "cypress run --config-file config/ui.config.json --env allure=true",
+    "cy:api:run": "cypress run --config-file config/api.config.json --env allure=true",
+    "cy:ui:headless": "cypress run --config-file config/ui.config.json --env allure=true --headless --browser chrome",
+    "cy:run:parallel": "node cypress/scripts/parallel executors=2 script=cy:ui:run",
+    "report:ui": "npx allure generate reports/ui/allure-results --clean -o reports/ui/allure-report && allure open reports/ui/allure-report",
+    "report:api": "npx allure generate reports/api/allure-results --clean -o reports/api/allure-report && allure open reports/api/allure-report",
+    "clear": "rm -r reports/** || true",
+    "docker:build:cypress": "docker build -t cypress -f docker/Dockerfile .",
+    "docker:stop:cypress": "docker stop $(docker ps -qa --filter ancestor=cypress)"
+  },
+  "dependencies": {
+    "cypress": "4.7.0",
+    "http-status-codes": "^1.4.0",
+    "tsify": "4.0.1"
+  },
+  "devDependencies": {
+    "@cypress/webpack-preprocessor": "^1.0.2",
+    "@shelex/cypress-allure-plugin": "^1.6.0",
+    "@typescript-eslint/eslint-plugin": "2.30.0",
+    "@typescript-eslint/eslint-plugin-tslint": "2.30.0",
+    "@typescript-eslint/parser": "2.30.0",
+    "allure-commandline": "^2.13.0",
+    "chai": "4.2.0",
+    "coffeescript": "2.5.1",
+    "cypress-react-selector": "^0.1.6",
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-prettier": "3.1.3",
+    "eslint-plugin-simple-import-sort": "5.0.3",
+    "eslint-plugin-unicorn": "18.0.1",
+    "husky": "3.0.0",
+    "lint-staged": "9.2.0",
+    "prettier": "1.18.2",
+    "pretty-quick": "1.11.1",
+    "sinon": "7.5.0",
+    "sinon-chai": "^3.5.0",
+    "ts-loader": "^3.0.2",
+    "ts-node": "8.3.0",
+    "tslint": "^6.0.0",
+    "typescript": "3.2.1",
+    "webpack": "^3.8.1",
+    "yarn": "^1.22.4"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 150
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": [
+      "pretty-quick --staged"
+    ],
+    "*.ts": [
+      "npm run lint"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "abhinabaghosh.cucumberquick",
+    "alexkrechik.cucumberautocomplete",
+    "bierner.markdown-preview-github-styles",
+    "christian-kohler.path-intellisense",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "mikestead.dotenv",
+    "PKief.material-icon-theme",
+    "streetsidesoftware.code-spell-checker",
+    "VisualStudioExptTeam.vscodeintellicode"
+  ]
+}
