@@ -6,7 +6,6 @@ pipeline {
   agent { 
         dockerfile {
               filename "${CYPRESS_DOCKER_PATH}"
-                args '-e HOME=${workspace}'
       } 
   }
   stages {
@@ -27,6 +26,7 @@ pipeline {
         sh 'npm config set registry https://registry.npmjs.org/'
         sh 'npm cache clean --force'
         sh 'npm ci'
+        sh 'npx cypress verify --verbose'
         sh 'npm run clear' 
         sh 'npm run lint' 
       }

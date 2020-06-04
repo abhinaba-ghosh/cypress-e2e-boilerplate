@@ -30,3 +30,5 @@ WORKDIR /home/node/app
 
 # avoid many lines of progress bars during install
 ENV CI=1
+
+ENV HOME=/tmp
