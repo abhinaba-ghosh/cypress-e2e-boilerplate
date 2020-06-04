@@ -8,12 +8,10 @@ pipeline {
               filename "${CYPRESS_DOCKER_PATH}"
               args  '--net=host -e DISPLAY=":0"'
                 args '--entrypoint=\'\''
+                args '-e HOME=${workspace}'
               reuseNode true
       } 
   }
- environment {
-  HOME = "${env.WORKSPACE}"
- }
   stages {
     stage('Clone scm') {
    steps {
