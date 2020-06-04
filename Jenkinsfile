@@ -24,7 +24,6 @@ pipeline {
     stage('Configuration') {
       steps {
         sh 'npm config set registry https://registry.npmjs.org/'
-        sh 'npm cache clean --force'
         sh 'npm ci'
         sh 'npx cypress verify'
         sh 'npm run clear' 

@@ -10,7 +10,7 @@
     "cy:ui:dev": "cypress open --config-file config/ui.config.json --browser chrome",
     "cy:ui:run": "cypress run --config-file config/ui.config.json --env allure=true --browser chrome",
     "cy:api:run": "cypress run --config-file config/api.config.json --env allure=true",
-    "cy:ui:headless": "cypress run --config-file config/ui.config.json --env allure=true --headless --browser chrome",
+    "cy:ui:headless": "cypress run --config-file config/ui.config.json --env allure=true",
     "cy:run:parallel": "node parallel executors=2 script=cy:ui:run",
     "report:ui": "npx allure generate reports/ui/allure-results --clean -o reports/ui/allure-report && allure open reports/ui/allure-report",
     "report:api": "npx allure generate reports/api/allure-results --clean -o reports/api/allure-report && allure open reports/api/allure-report",
