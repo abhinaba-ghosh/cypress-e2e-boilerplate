@@ -6,10 +6,7 @@ pipeline {
   agent { 
         dockerfile {
               filename "${CYPRESS_DOCKER_PATH}"
-              args  '--net=host -e DISPLAY=":0"'
-                args '--entrypoint=\'\''
                 args '-e HOME=${workspace}'
-              reuseNode true
       } 
   }
   stages {

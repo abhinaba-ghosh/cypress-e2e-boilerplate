@@ -3,7 +3,7 @@
 # https://documentation.codeship.com/pro/languages-frameworks/nodejs/
 
 # use Cypress provided image with all dependencies included
-FROM cypress/base:10
+FROM cypress/base:14.2.0
 RUN node --version
 RUN npm --version
 
