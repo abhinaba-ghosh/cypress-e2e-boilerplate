@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --ext .ts --fix",
-    "cy:e2e": "npm run clear && npm run cy:ui:headless && npm run report:ui",
+    "cy:e2e": "npm run clear && npm run cy:ui:run && npm run report:ui",
     "cy:api": "npm run clear && npm run cy:api:run && npm run report:api",
     "cy:ui:dev": "cypress open --config-file config/ui.config.json --browser chrome",
-    "cy:ui:run": "cypress run --config-file config/ui.config.json --env allure=true",
+    "cy:ui:run": "cypress run --config-file config/ui.config.json --env allure=true --browser chrome",
     "cy:api:run": "cypress run --config-file config/api.config.json --env allure=true",
     "cy:ui:headless": "cypress run --config-file config/ui.config.json --env allure=true --headless --browser chrome",
     "cy:run:parallel": "node parallel executors=2 script=cy:ui:run",

@@ -29,7 +29,7 @@ pipeline {
     // first stage installs node dependencies and Cypress binary
     stage('Configuration') {
       steps {
-        sh 'npm ci'
+        sh 'npm install'
         sh 'npm run clean' 
         sh 'npm run lint' 
       }
@@ -56,6 +56,7 @@ pipeline {
         )
     }
     }
+  }
 
   post {
     // shutdown the server running in the background
