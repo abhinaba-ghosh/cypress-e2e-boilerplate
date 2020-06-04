@@ -1,6 +1,6 @@
 # cy-fy
 
-Cypress starter pack for UI and API automation testing. Simple and neat folder structure in combination with cucumber and typescript will help you write test faster.
+Cypress starter pack for UI and API automation testing. Simple and neat folder structure in combination with typescript will help you write test faster. The Jenkinsfile and Dockerfiles will guide you to setup the CI/CD pipeline quickly.
 
 ## Get started
 
