@@ -29,7 +29,8 @@ pipeline {
     // first stage installs node dependencies and Cypress binary
     stage('Configuration') {
       steps {
-        sh 'npm install'
+        sh 'npm ci'
+        sh '$(npm bin)/cypress verify'
         sh 'npm run clean' 
         sh 'npm run lint' 
       }

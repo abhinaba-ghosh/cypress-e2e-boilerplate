@@ -24,14 +24,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 RUN export JAVA_HOME
 RUN java -version
 
-# We need root privileages to install new deps:
-USER root
-
-
-ENV LANG C.UTF-8
-
-# add a simple script that can auto-detect the appropriate JAVA_HOME value
-# based on whether the JDK or only the JRE is installed
-
-
 WORKDIR /home/node/app
+
+# avoid many lines of progress bars during install
+ENV CI=1
