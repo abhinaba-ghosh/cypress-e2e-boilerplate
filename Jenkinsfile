@@ -26,7 +26,6 @@ pipeline {
       steps {
         sh 'npm cache clean --force'
         sh 'npm ci'
-        sh 'npx cypress verify'
         sh 'npm run clear' 
         sh 'npm run lint' 
       }
