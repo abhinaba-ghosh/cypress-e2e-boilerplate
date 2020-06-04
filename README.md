@@ -99,21 +99,6 @@ npm run lint
 
 ## Quick guide to write tests
 
-#### Prepare use cases as features
-
-Using Gherkin syntaxes, you can prepare the test scenarios in `Given-When-Then` format. This is a typical way of practicing `behavior-driven-development` (BDD).
-
-```feature
-Feature: Page Login
-  As a user, I want to login to the page
-
-  Scenario: user checks login is successful
-    Given user navigates to the target login page
-    And user enter "tomsmith" and "SuperSecretPassword!"
-    When user click the login button
-    Then user should see the login success message
-```
-
 ## Generate reports
 
 Reports will be generated separately for API and UI test cases but will have the same essence of Allure.
