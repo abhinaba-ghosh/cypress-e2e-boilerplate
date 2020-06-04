@@ -24,7 +24,7 @@ pipeline {
     stage('Configuration') {
       steps {
         sh 'npm config set registry https://registry.npmjs.org/'
-        sh 'yarn install'
+        sh 'npm ci'
         sh 'npx cypress verify'
         sh 'npm run clear' 
         sh 'npm run lint' 
@@ -34,7 +34,7 @@ pipeline {
    stage('Run Cypress UI Tests') {
    steps {
     sh "npm run cy:ui:headless" 
-    sh "npm run report:ui" 
+    sh "npx allure generate reports/ui/allure-results --clean -o reports/ui/allure-report" 
    }
   }
 

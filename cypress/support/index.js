@@ -18,9 +18,5 @@ import '@shelex/cypress-allure-plugin';
 import 'cypress-react-selector';
 import './commands';
 
-after(function() {
-  cy.window().then(win => (win.onbeforeunload = undefined));
-});
-
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
