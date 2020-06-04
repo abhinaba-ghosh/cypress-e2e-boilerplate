@@ -3,9 +3,11 @@
 # https://documentation.codeship.com/pro/languages-frameworks/nodejs/
 
 # use Cypress provided image with all dependencies included
-FROM cypress/base:14.2.0
+FROM cypress/base:12.1.0
 RUN node --version
 RUN npm --version
+
+USER root
 
 # Install OpenJDK-8
 RUN apt-get update && \

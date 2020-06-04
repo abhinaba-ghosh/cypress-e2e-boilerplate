@@ -25,7 +25,7 @@ pipeline {
     stage('Configuration') {
       steps {
         sh 'npm ci'
-        sh '$(npm bin)/cypress verify'
+        sh 'npx cypress verify'
         sh 'npm run clean' 
         sh 'npm run lint' 
       }
