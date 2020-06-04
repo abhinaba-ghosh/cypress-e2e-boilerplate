@@ -26,6 +26,8 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 RUN export JAVA_HOME
 RUN java -version
 
+RUN npm install -g yarn
+
 WORKDIR /home/node/app
 
 # avoid many lines of progress bars during install
