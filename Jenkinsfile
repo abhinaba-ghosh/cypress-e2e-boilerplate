@@ -24,7 +24,7 @@ pipeline {
     stage('Configuration') {
       steps {
         sh 'npm config set registry https://registry.npmjs.org/'
-        sh 'npm ci'
+        sh 'yarn install'
         sh 'npx cypress verify'
         sh 'npm run clear' 
         sh 'npm run lint' 
